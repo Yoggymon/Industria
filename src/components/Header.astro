@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logo.png';
+---
+
+<header class="fixed w-full bg-gray-950 shadow-md z-50">
+  <div class="container mx-auto flex justify-between items-center p-3">
+    <!-- Logo -->
+    <div class="w-96 md:w-96">
+      <a href="/">
+        <Image src={logoImage} alt="Logo de la empresa" class="w-full h-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- Botón de menú móvil -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Navegación -->
+    <nav id="menu" class="hidden md:block text-xl ">
+      <ul class="md:flex md:space-x-8">
+        <li><a href="#productos" class="text-white hover:text-secondary font-medium">Productos</a></li>
+        <li><a href="#servicios" class="text-white hover:text-secondary font-medium">Servicios</a></li>
+        <li><a href="#nosotros" class="text-white hover:text-secondary font-medium">Nosotros</a></li>
+        <li><a href="#contacto" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Toggle menu para dispositivos móviles
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      if (!menu) return; // Ensure menu exists before toggling classes
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('block');
+      menu.classList.toggle('absolute');
+      menu.classList.toggle('top-16');
+      menu.classList.toggle('right-0');
+      menu.classList.toggle('bg-primary');
+      menu.classList.toggle('w-full');
+      menu.classList.toggle('shadow-md');
+      menu.classList.toggle('p-4');
+    });
+  }
+
+  // Cerrar menú al hacer clic en un enlace
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768 && menu) {
+        menu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Estilos adicionales para el menú móvil */
+  @media (max-width: 768px) {
+    #menu:not(.hidden) {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #00355d; /* Color primary */
+      padding: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    #menu:not(.hidden) ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

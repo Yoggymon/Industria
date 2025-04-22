@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+/* Estilos globales */
+body {
+  background-color: #0d5282;
+  /* Color primary */
+  color: white;
+}
+
+/* Separadores de sección suaves */
+section+section {
+  border-top: 1px solid rgba(229, 252, 255, 0.2);
+  /* secondary color con transparencia */
+}

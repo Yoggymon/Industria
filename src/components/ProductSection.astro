@@ -1,0 +1,41 @@
+---
+import ProductCard from './ProductCard.astro';
+
+const products = [
+  {
+    title: 'Producto 1',
+    description: 'Descripción breve del producto 1.',
+    image: '/images/productos/producto1.jpg',
+  },
+  {
+    title: 'Producto 2',
+    description: 'Descripción breve del producto 2.',
+    image: '/images/productos/producto2.jpg',
+  },
+  {
+    title: 'Producto 3',
+    description: 'Descripción breve del producto 3.',
+    image: '/images/productos/producto3.jpg',
+  },
+  {
+    title: 'Producto 4',
+    description: 'Descripción breve del producto 4.',
+    image: '/images/productos/producto4.jpg',
+  },
+];
+---
+
+<section id="productos" class="py-16 border-t border-secondary/30">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white text-center mb-10">Nuestros Productos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {products.map(product => (
+        <ProductCard
+          title={product.title}
+          description={product.description}
+          image={product.image}
+        />
+      ))}
+    </div>
+  </div>
+</section>

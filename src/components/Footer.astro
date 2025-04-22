@@ -1,0 +1,64 @@
+---
+---
+
+<footer id="contacto" class="py-10 border-t border-secondary/30">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Información de contacto -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-secondary">Contacto</h3>
+        <p class="mb-2">Email: info@tuempresa.com</p>
+        <p class="mb-2">Teléfono: +123 456 7890</p>
+        <p>Dirección: Calle Principal #123, Ciudad</p>
+      </div>
+      
+      <!-- Enlaces rápidos -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-secondary">Enlaces Rápidos</h3>
+        <ul>
+          <li class="mb-2"><a href="#productos" class="hover:underline">Productos</a></li>
+          <li class="mb-2"><a href="#servicios" class="hover:underline">Servicios</a></li>
+          <li><a href="#nosotros" class="hover:underline">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      
+      <!-- Formulario de contacto -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-secondary">Escríbenos</h3>
+        <form class="space-y-4">
+          <div>
+            <input 
+              type="text" 
+              placeholder="Nombre" 
+              class="w-full p-2 rounded text-dark"
+            />
+          </div>
+          <div>
+            <input 
+              type="email" 
+              placeholder="Email" 
+              class="w-full p-2 rounded text-dark"
+            />
+          </div>
+          <div>
+            <textarea 
+              placeholder="Mensaje" 
+              rows="3" 
+              class="w-full p-2 rounded text-dark"
+            ></textarea>
+          </div>
+          <button 
+            type="submit" 
+            class="bg-secondary text-primary font-medium py-2 px-4 rounded hover:bg-opacity-90"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-secondary/30 text-center">
+      <p>&copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

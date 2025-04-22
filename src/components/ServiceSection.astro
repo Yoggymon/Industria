@@ -1,0 +1,36 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+  {
+    title: 'Servicio 1',
+    description: 'Descripción detallada del servicio 1. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
+    image: '/images/servicios/servicio1.jpg',
+  },
+  {
+    title: 'Servicio 2',
+    description: 'Descripción detallada del servicio 2. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
+    image: '/images/servicios/servicio2.jpg',
+  },
+  {
+    title: 'Servicio 3',
+    description: 'Descripción detallada del servicio 3. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
+    image: '/images/servicios/servicio3.jpg',
+  },
+];
+---
+
+<section id="servicios" class="py-16 border-t border-secondary/30">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white text-center mb-10">Nuestros Servicios</h2>
+    <div class="space-y-8">
+      {services.map(service => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          image={service.image}
+        />
+      ))}
+    </div>
+  </div>
+</section>
