@@ -13,3 +13,7 @@ section+section {
   border-top: 1px solid rgba(229, 252, 255, 0.2);
   /* secondary color con transparencia */
 }
+section[id] {
+  scroll-margin-top: 5rem;
+  /* Ajusta este valor según la altura de tu header */
+}
