@@ -1,22 +1,41 @@
 ---
-import ServiceCard from './ServiceCard.astro';
+import ServiceCard from './ServiceCard.astro'; 
+
+import { Image } from 'astro:assets';
+
+//Importando imagenes de los servicios
+import service1 from '../assets/servicios1.webp'
+import service2 from '../assets/servicios2.webp'
+import service3 from '../assets/servicios3.webp'
+import service4 from '../assets/servicios4.webp'
+import service5 from '../assets/servicios5.webp'
 
 const services = [
   {
-    title: 'Servicio 1',
-    description: 'Descripción detallada del servicio 1. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
-    image: '/images/servicios/servicio1.jpg',
+    title: 'Limpieza y tratamiento superficial del suelo',
+    description: 'Nuestro servicio especializado de limpieza y tratamiento superficial del suelo garantiza la restauración, protección y embellecimiento de todo tipo de pavimentos. Mediante técnicas avanzadas y productos profesionales, eliminamos eficazmente manchas, residuos y deterioro acumulado en suelos de cerámica, mármol, porcelanato, madera, vinilo y hormigón. El tratamiento incluye limpieza profunda, desinfección, eliminación de bacterias, y aplicación de selladores protectores que prolongan la vida útil de su superficie. Ideal para hogares, oficinas, locales comerciales e instalaciones industriales. Confíe en nuestros especialistas certificados para transformar sus suelos, mejorando la estética y salubridad de sus espacios con resultados duraderos y garantizados.',
+    image: service1,
   },
   {
-    title: 'Servicio 2',
-    description: 'Descripción detallada del servicio 2. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
-    image: '/images/servicios/servicio2.jpg',
+    title: 'Revestimientos de Pisos Poliméricos en Epóxico y Poliuretano',
+    description: "Instalamos revestimientos de pisos poliméricos de alta resistencia en epóxico y poliuretano, diseñados para transformar y proteger superficies en entornos industriales, comerciales y residenciales. Nuestros sistemas de pavimentación continua ofrecen propiedades excepcionales: resistencia química, mecánica y a la abrasión, impermeabilidad total, fácil limpieza y mantenimiento reducido. Disponibles en múltiples acabados (brillante, mate, antideslizante), colores personalizados y espesores adaptados a cada necesidad. Ideal para industrias alimentarias, farmacéuticas, hospitales, laboratorios, almacenes, estacionamientos y espacios decorativos. Garantizamos instalación profesional, mínimo tiempo de inactividad y resultados duraderos que cumplen con las normativas más exigentes de higiene y seguridad.",
+    image: service2 ,
   },
   {
-    title: 'Servicio 3',
-    description: 'Descripción detallada del servicio 3. Explicamos cómo este servicio puede beneficiar a nuestros clientes y qué resultados pueden esperar.',
-    image: '/images/servicios/servicio3.jpg',
+    title: 'Mantenimiento y reparacion de chancadoras y molinos',
+    description: 'Servicio especializado de mantenimiento preventivo, predictivo y correctivo para chancadoras y molinos industriales de todas las marcas y modelos. Nuestro equipo técnico altamente cualificado diagnostica, repara y optimiza equipos de trituración, molienda y pulverización utilizados en minería, construcción, cementeras y agregados. Ofrecemos soluciones integrales que incluyen revisión mecánica completa, reemplazo de componentes críticos, alineación precisa, balanceo dinámico y ajuste de parámetros operativos. Minimizamos tiempos de inactividad mediante mantenimientos programados, inspecciones periódicas y disponibilidad de repuestos originales y alternativos de alta calidad. Garantizamos mayor productividad, reducción de costos operativos y prolongación de la vida útil de sus equipos trituradores. Servicio disponible 24/7 para emergencias, con cobertura nacional y respuesta rápida para mantener sus operaciones funcionando sin interrupciones.',
+    image: service3 ,
   },
+  {
+   title: 'Reparación de juntas de dilatación y cavidades ',
+    description: 'Servicio profesional especializado en reparación, restauración y mantenimiento de juntas de dilatación y cavidades en todo tipo de estructuras. Solucionamos problemas de juntas deterioradas, agrietadas o dañadas en edificaciones, pavimentos industriales, estacionamientos, puentes y obras civiles. Utilizamos materiales elastoméricos de alta resistencia, selladores poliuretánicos y sistemas epóxicos que garantizan durabilidad, impermeabilidad y capacidad de movimiento óptima. Nuestro proceso incluye evaluación técnica, limpieza profunda, eliminación de residuos, aplicación de imprimaciones específicas y sellado con tecnologías avanzadas. Prevenimos filtraciones, daños estructurales y accidentes, mientras aseguramos el correcto funcionamiento de las juntas ante cambios térmicos y movimientos sísmicos. Contamos con equipos especializados y técnicos certificados para intervenciones precisas que minimizan tiempos de inactividad en sus instalaciones. Servicio disponible a nivel nacional, con atención personalizada y soluciones adaptadas a cada necesidad.',
+    image: service4,
+  },
+  {
+    title: 'Reparación de suelos Asfalticos',
+    description : "Servicio integral de reparación, mantenimiento y rehabilitación de pavimentos asfálticos para vías urbanas, carreteras, estacionamientos y áreas industriales. Nuestro equipo especializado diagnostica y soluciona todo tipo de deterioros: baches, fisuras, agrietamientos, deformaciones, desprendimientos y fallas estructurales. Utilizamos tecnología avanzada y materiales asfálticos de última generación que garantizan alta resistencia al tráfico, condiciones climáticas extremas y desgaste cotidiano. El proceso incluye evaluación técnica, fresado controlado, preparación de superficie, aplicación de emulsiones adherentes y colocación de mezclas asfálticas en caliente o frío según requerimientos. Ofrecemos soluciones rápidas que minimizan interrupciones, con acabados perfectamente nivelados y compactados que aseguran mayor durabilidad. Trabajos garantizados que cumplen normas técnicas internacionales y proporcionan superficies seguras, funcionales y estéticamente impecables. Servicio disponible a nivel nacional, con atención personalizada y adaptada a cada proyecto. Contamos con equipos de última tecnología y personal altamente capacitado para brindar resultados óptimos en cada intervención.",
+    image: service5 ,
+  }
 ];
 ---
 

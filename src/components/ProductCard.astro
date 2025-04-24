@@ -1,15 +1,21 @@
 ---
+import { Image } from 'astro:assets';
+
 export interface Props {
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
 }
 
 const { title, description, image } = Astro.props;
 ---
 
 <div class="bg-secondary rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-  <img src={image} alt={title} class="w-full h-48 object-cover" />
+  <Image
+  loading="lazy" 
+  src={image} 
+  alt={title} 
+  class="w-full h-48 object-cover" />
   <div class="p-4">
     <h3 class="text-xl font-semibold text-primary mb-2">{title}</h3>
     <p class="text-dark">{description}</p>

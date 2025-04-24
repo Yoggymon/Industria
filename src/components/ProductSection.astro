@@ -1,34 +1,52 @@
 ---
 import ProductCard from './ProductCard.astro';
 
+import product1 from '../assets/producto1.webp'
+import product2 from '../assets/producto2.webp'
+import product3 from '../assets/producto3.webp'
+import product4 from '../assets/producto4.webp'
+import product5 from '../assets/producto5.webp'
+import product6 from '../assets/producto5.webp'
+
 const products = [
   {
-    title: 'Producto 1',
+    title: 'Arenapoxi Backing Material',
     description: 'Descripción breve del producto 1.',
-    image: '/images/productos/producto1.jpg',
+    image: product1,
   },
   {
-    title: 'Producto 2',
+    title: 'Fabricación de Resinas Epóxicas , Poliuretano',
+    description: 'Descripción breve del producto 6.',
+    image: product2,
+  },
+  {
+    title: 'Fabricación de Grounting Epoxino autonivelante',
     description: 'Descripción breve del producto 2.',
-    image: '/images/productos/producto2.jpg',
+    image: product3,
   },
   {
-    title: 'Producto 3',
+    title: 'Fabricación de Grounting Segmenticio autonivelante',
     description: 'Descripción breve del producto 3.',
-    image: '/images/productos/producto3.jpg',
+    image: product4,
   },
   {
-    title: 'Producto 4',
+    title: 'Fabricación de Morteros Epóxicos',
     description: 'Descripción breve del producto 4.',
-    image: '/images/productos/producto4.jpg',
+    image: product5,
   },
+  {
+    title: 'Fabricación de Zocalos Sanitarios',
+    description: 'Descripción breve del producto 5.',
+    image: product6,
+  },
+
 ];
 ---
 
 <section id="productos" class="py-10 border-t border-secondary/30">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-white text-center mb-10">Nuestros Productos</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map(product => (
         <ProductCard
           title={product.title}
